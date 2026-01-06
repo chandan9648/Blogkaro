@@ -12,11 +12,12 @@ app.use(express.json());
 
 app.use(cors({
   origin: ['https://blogkarozilla.vercel.app', 'http://localhost:5173'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
 
 
-// Routes
+//all Routes
 app.use('/api/user', userRoutes);
 app.use('/api/blog', blogRoutes);
 app.use('/api/comment', commentRoutes);
