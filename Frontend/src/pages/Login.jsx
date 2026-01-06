@@ -13,12 +13,12 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-  console.log("Login form submitted"); // 🔍 Debug line
+  console.log("Login form submitted"); 
 
     try {
       const { data } = await axios.post('/api/user/login', { email, password });
 
-      console.log("Login response:", data); // 🔍 Debug line
+      console.log("Login response:", data); 
 
       if (data.token) {
          setToken(data.token);
